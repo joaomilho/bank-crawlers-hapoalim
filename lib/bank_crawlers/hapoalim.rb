@@ -6,5 +6,8 @@ module BankCrawlers
   end
 end
 
+require_relative 'hapoalim/monkey_patches'
+require_relative 'hapoalim/parser'
+require_relative 'hapoalim/runner'
+require_relative 'hapoalim/cache'
 require_relative 'hapoalim/crawler'
-require_relative 'hapoalim/version'
