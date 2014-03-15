@@ -1,21 +1,10 @@
-
-
-
-
-
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-
-
-
-
-require 'bank_crawlers/hapoalim/version'
-
 Gem::Specification.new do |spec|
   spec.name          = "bankcrawlers-hapoalim"
-  spec.version       = BankCrawlers::Hapoalim::VERSION
+  spec.version       = '0.0.2'
   spec.authors       = ["Maiz Lulkin"]
   spec.email         = ["maiz@lulk.in"]
   spec.description   = %q{TODO: Write a gem description}

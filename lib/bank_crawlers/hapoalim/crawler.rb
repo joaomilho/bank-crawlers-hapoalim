@@ -1,4 +1,5 @@
 require 'hpricot'
+require 'capybara/poltergeist'
 
 class String
   def dateify
@@ -105,7 +106,6 @@ module BankCrawlers::Hapoalim
   end
 
   class Crawler
-    #require 'capybara/poltergeist'
     include Capybara::DSL
 
     BASE_URL = "https://login.bankhapoalim.co.il/cgi-bin/poalwwwc"
