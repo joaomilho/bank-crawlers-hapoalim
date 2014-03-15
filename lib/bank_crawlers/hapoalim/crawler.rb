@@ -1,4 +1,3 @@
-require 'capybara/poltergeist'
 require 'hpricot'
 
 class String
@@ -106,7 +105,7 @@ module BankCrawlers::Hapoalim
   end
 
   class Crawler
-
+    require 'capybara/poltergeist'
     include Capybara::DSL
 
     BASE_URL = "https://login.bankhapoalim.co.il/cgi-bin/poalwwwc"
