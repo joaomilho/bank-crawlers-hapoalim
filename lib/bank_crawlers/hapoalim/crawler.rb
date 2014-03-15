@@ -3,7 +3,7 @@ require 'capybara/poltergeist'
 
 class String
   def dateify
-    Date.parse("#{self} 2014")
+    Date.parse("#{self} 2014") rescue Date.today
   end
 
   def numerify
@@ -35,6 +35,8 @@ module BankCrawlers::Hapoalim
 
     def parse_row row
       items = row.search('td')
+      puts "ROW ITEMS"
+      puts items.inspect
       {
         created_at: items.shift.clean_text.dateify,
         description: items.shift.clean_text,

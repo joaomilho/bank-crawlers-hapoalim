@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "bankcrawlers-hapoalim"
-  spec.version       = '0.0.2'
+  spec.version       = '0.0.3'
   spec.authors       = ["Maiz Lulkin"]
   spec.email         = ["maiz@lulk.in"]
   spec.description   = %q{TODO: Write a gem description}
