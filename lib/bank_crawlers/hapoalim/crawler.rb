@@ -129,7 +129,6 @@ module BankCrawlers::Hapoalim
 
     private
 
-    #delegate :frame, :goto, :text_field, :button, to: :browser
     def login
       visit @@urls[:login]
       fill_in :userid, with: user_name

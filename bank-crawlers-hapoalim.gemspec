@@ -25,6 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "vcr"
 
   spec.add_dependency "poltergeist"
-  spec.add_dependency "active_support"
   spec.add_dependency "hpricot"
 end
