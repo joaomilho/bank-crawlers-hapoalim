@@ -1,4 +1,4 @@
-require 'capybara'
+require 'capybara/poltergeist'
 require 'hpricot'
 
 class String
