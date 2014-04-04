@@ -1,6 +1,6 @@
 # Bank::Crawlers::Hapoalim
 
-TODO: Write a gem description
+A (crappy) crawler for the (crappy) Hapoalim online interface.
 
 ## Installation
 
@@ -18,8 +18,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
+```                                                                                    
+BankCrawlers::Hapoalim.run "USER", "TEUDAT ZEUT", "PASSWORD"
+```
+   
 ## Contributing
 
 1. Fork it
