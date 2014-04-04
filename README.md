@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-```                                                                                    
+```ruby                                                                                    
 BankCrawlers::Hapoalim.run "USER", "TEUDAT ZEUT", "PASSWORD"
 ```
    
