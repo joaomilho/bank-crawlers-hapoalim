@@ -1,4 +1,5 @@
 require 'hpricot'
+require 'pry'
 require_relative 'lib/bank_crawlers/hapoalim'
 
 # Usage:
