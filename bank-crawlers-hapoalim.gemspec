@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = '0.0.5'
   spec.authors       = ["Maiz Lulkin"]
   spec.email         = ["maiz@lulk.in"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{A crappy crawler for a crappy bank interface}
+  spec.summary       = %q{A crappy crawler for a crappy bank interface}
   spec.homepage      = ""
   spec.license       = "MIT"
 
