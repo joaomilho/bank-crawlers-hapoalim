@@ -10,7 +10,7 @@ module BankCrawlers::Hapoalim
 
     BASE_URL = "https://login.bankhapoalim.co.il/cgi-bin/poalwwwc"
     @@urls = {
-      login: "/?language=EN"
+      login: "/?language=EN&nls=EN"
     }
 
     attr_reader :user_name, :user_id, :password
