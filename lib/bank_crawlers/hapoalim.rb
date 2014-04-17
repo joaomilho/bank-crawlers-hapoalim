@@ -6,7 +6,8 @@ module BankCrawlers
   end
 end
 
-require_relative 'hapoalim/monkey_patches'
+require_relative 'hapoalim/string_patches'
+require_relative 'hapoalim/hpricot_patches'
 require_relative 'hapoalim/parser'
 require_relative 'hapoalim/runner'
 require_relative 'hapoalim/cache'

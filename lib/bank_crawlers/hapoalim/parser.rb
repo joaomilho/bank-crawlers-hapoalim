@@ -17,8 +17,6 @@ module BankCrawlers::Hapoalim
 
     def parse_row row
       items = row.search('td')
-      puts "ROW ITEMS"
-      puts items.inspect
       {
         created_at: items.shift.clean_text.dateify,
         description: items.shift.clean_text,
