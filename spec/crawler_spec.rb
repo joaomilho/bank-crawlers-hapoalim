@@ -6,6 +6,7 @@ describe Crawler do
   describe "#transaction_table", :vcr do
     context 'given valid auth data' do
       subject(:crawler) do
+        Cache.new.clear
         Crawler.new 'WE05084', '337735658', 'aagn3392'
       end
 
