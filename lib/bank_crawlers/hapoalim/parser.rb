@@ -19,7 +19,7 @@ module BankCrawlers::Hapoalim
       items = row.search('td').map(&:clean_text)
       {
         created_at:   items.shift.dateify,
-        description:  items.shift
+        description:  items.shift,
         number:       items.shift,
         confirmed_at: items.shift.dateify,
         amount:       items.shift.numerify,
