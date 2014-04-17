@@ -3,7 +3,7 @@ require_relative 'spec_helper'
 include BankCrawlers::Hapoalim
 
 describe Cache do
-  describe ".get" do
+  describe "#get" do
     subject(:cache){ Cache.new }
 
     before do

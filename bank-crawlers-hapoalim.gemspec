@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~>2.14"
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "timecop"
-  spec.add_development_dependency "webmock"
+  spec.add_development_dependency "webmock", "1.15"
   spec.add_development_dependency "psych"
 
   spec.add_dependency "capybara"

@@ -5,14 +5,9 @@ include BankCrawlers::Hapoalim
 describe Runner do
   let(:html) { File.read(Dir.pwd + "/spec/fixtures/transactions.html") }
 
-  # before do
-  #
-  # end
-
   subject(:runner) do
     Runner.new 'user', 'id', 'pass'
   end
-
 
   describe "#run" do
     context 'given cache is empty' do
@@ -31,7 +26,7 @@ describe Runner do
         Cache.new.set("!")
       end
 
-      it 'gets from the crawler' do
+      it 'gets from the cache' do
         allow_any_instance_of(Cache).to receive(:get).and_return(html)
         runner.run
       end
