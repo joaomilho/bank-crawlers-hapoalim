@@ -16,15 +16,15 @@ module BankCrawlers::Hapoalim
     private
 
     def parse_row row
-      items = row.search('td')
+      items = row.search('td').map(&:clean_text)
       {
-        created_at: items.shift.clean_text.dateify,
-        description: items.shift.clean_text,
-        number: items.shift.clean_text,
-        confirmed_at: items.shift.clean_text.dateify,
-        amount: items.shift.clean_text.numerify,
-        extra_info: items.shift.clean_text,
-        balance: items.shift.clean_text.numerify
+        created_at:   items.shift.dateify,
+        description:  items.shift
+        number:       items.shift,
+        confirmed_at: items.shift.dateify,
+        amount:       items.shift.numerify,
+        extra_info:   items.shift,
+        balance:      items.shift.numerify
       }
     rescue
       nil
