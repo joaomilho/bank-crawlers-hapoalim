@@ -1,3 +1,5 @@
+require 'hpricot'
+
 module BankCrawlers
   module Hapoalim
     def self.run user_name, user_id, password

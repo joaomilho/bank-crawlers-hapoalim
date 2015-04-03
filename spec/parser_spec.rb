@@ -17,7 +17,7 @@ describe Parser do
 
   describe "#transactions" do
     it "should have 2 transactions" do
-      expect(parser.transactions).to have(2).transactions
+      expect(parser.transactions.length).to be(2)
     end
   end
 end

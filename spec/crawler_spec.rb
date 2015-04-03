@@ -7,11 +7,12 @@ describe Crawler, vcr: true do
     context 'given valid auth data' do
       subject(:crawler) do
         raise "You should set credentials in your ENV to run this test" unless ENV['HAPOALIM_USER']
-        Crawler.new ENV['HAPOALIM_USER'], ENV['HAPOALIM_ID'], ENV['HAPOALIM_PASSWORD']
+        Crawler.new ENV['HAPOALIM_USER'], ENV['HAPOALIM_PASSWORD']
       end
 
       it 'gets transaction table from online bank' do
-        title = (Hpricot(crawler.transaction_table) % 'title').inner_text
+        doc = Hpricot(crawler.transaction_table)
+        title = (doc % 'title').inner_text
         title[0] = '' # Remove first trash character
         expect(title).to eq("Account transactions")
       end
@@ -19,7 +20,7 @@ describe Crawler, vcr: true do
 
     context 'given invalid auth data' do
       subject(:crawler) do
-        Crawler.new 'bogus', 'bogus', 'bogus'
+        Crawler.new 'bogus', 'bogus'
       end
 
       it 'raises InvalidCredentials' do
